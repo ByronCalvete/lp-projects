@@ -217,6 +217,12 @@ body {
               color: #fff;
               font-weight: bold;
               cursor: pointer;
+              transition: all .3s ease;
+
+              &:hover {
+                background: #3757f8;
+                transform: scale(1.05);
+              }
             }
 
             i {
@@ -239,6 +245,106 @@ body {
       img {
         width: 300px;
         height: 200px;
+        object-position: 30% 35%;
+      }
+    }
+
+    .playlist {
+      margin-top: 14px;
+      display: flex;
+      gap: 20px;
+
+      .genres {
+        color: #fff;
+        background: #202026;
+        padding: 20px;
+        border-radius: 6px;
+        width: 40%;
+
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+
+          a {
+            color: #919191;
+            font-size: 12px;
+          }
+        }
+
+        .items {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+
+          .item {
+            padding: 22px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
+
+            &:first-child {
+              background: #476a8a;
+            }
+
+            &:nth-child(2) {
+              background: #a69984;
+            }
+
+            &:nth-child(3) {
+              background: #a24c34;
+            }
+
+            &:nth-child(4) {
+              background: #0d4045;
+            }
+
+            &:nth-child(5) {
+              background: #a67894;
+            }
+
+            &:nth-child(6) {
+              background: #5547a5;
+            }
+
+            p {
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .music-list {
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+
+          a {
+            color: #919191;
+            font-size: 12px;
+          }
+        }
+
+        .items {
+          .item {
+            .info {
+              img {
+                width: 50px;
+              }
+            }
+          }
+        }
       }
     }
   }
